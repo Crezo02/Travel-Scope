@@ -1,6 +1,10 @@
 # <p align="center">🌍 TravelScope — Your Global Adventure Partner</p>
 
 <p align="center">
+  <a href="https://travel-scope.kesug.com/"><strong>View Live Demo »</strong></a>
+</p>
+
+<p align="center">
   <img src="https://img.shields.io/badge/PHP-8.x-777BB4?style=for-the-badge&logo=php&logoColor=white" />
   <img src="https://img.shields.io/badge/MySQL-Database-4479A1?style=for-the-badge&logo=mysql&logoColor=white" />
   <img src="https://img.shields.io/badge/Vanilla_JS-ES6+-F7DF1E?style=for-the-badge&logo=javascript&logoColor=black" />
