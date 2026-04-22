@@ -1,0 +1,301 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Explore any destination worldwide. Get weather forecasts, travel costs, and must-visit attractions for your next adventure.">
+    <title>TravelScope — Explore Any Destination</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&family=Outfit:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+    <!-- ═══ Animated Background Particles ═══ -->
+    <div class="bg-particles" id="particles"></div>
+
+    <!-- ═══ Navigation ═══ -->
+    <nav class="navbar" id="navbar">
+        <div class="nav-container">
+            <a href="#" class="logo">
+                <span class="logo-icon">🌍</span>
+                <span class="logo-text">Travel<span class="logo-accent">Scope</span></span>
+            </a>
+            <div class="nav-links">
+                <a href="#search-section" class="nav-link">Explore</a>
+                <a href="#trending" class="nav-link">Trending</a>
+                <a href="#about" class="nav-link">About</a>
+            </div>
+            <div class="nav-auth" id="nav-auth">
+                <!-- Filled by JS based on session cookie -->
+            </div>
+        </div>
+    </nav>
+
+    <!-- ═══ Hero Section ═══ -->
+    <header class="hero" id="search-section">
+        <div class="hero-content">
+            <div class="hero-badge">✨ Your Gateway to the World</div>
+            <h1 class="hero-title">
+                Discover Your Next
+                <span class="gradient-text">Adventure</span>
+            </h1>
+            <p class="hero-subtitle">
+                Search any destination to get real-time weather forecasts, estimated travel costs, and top attractions — all in one place.
+            </p>
+
+            <!-- Search Bar -->
+            <div class="search-container" id="search-container">
+                <div class="search-box">
+                    <div class="search-icon">
+                        <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
+                            <circle cx="11" cy="11" r="8"></circle>
+                            <line x1="21" y1="21" x2="16.65" y2="16.65"></line>
+                        </svg>
+                    </div>
+                    <input 
+                        type="text" 
+                        id="search-input" 
+                        class="search-input" 
+                        placeholder="Search any city... Paris, Tokyo, Dubai..."
+                        autocomplete="off"
+                    >
+                    <button id="search-btn" class="search-btn">
+                        <span class="btn-text">Explore</span>
+                        <span class="btn-loader" id="btn-loader"></span>
+                    </button>
+                </div>
+                <div class="quick-search">
+                    <span class="quick-label">Popular:</span>
+                    <button class="quick-tag" data-city="Paris">🗼 Paris</button>
+                    <button class="quick-tag" data-city="Tokyo">🗾 Tokyo</button>
+                    <button class="quick-tag" data-city="Dubai">🏙️ Dubai</button>
+                    <button class="quick-tag" data-city="Bali">🏝️ Bali</button>
+                    <button class="quick-tag" data-city="London">🎡 London</button>
+                </div>
+            </div>
+        </div>
+
+        <!-- Scroll Indicator -->
+        <div class="scroll-indicator" id="scroll-indicator">
+            <div class="scroll-mouse">
+                <div class="scroll-dot"></div>
+            </div>
+        </div>
+    </header>
+
+    <!-- ═══ Results Section ═══ -->
+    <main class="results-section" id="results-section" style="display: none;">
+        
+        <!-- Place Header -->
+        <div class="place-header" id="place-header">
+            <div class="place-header-content">
+                <div class="place-info">
+                    <h2 class="place-name" id="place-name"></h2>
+                    <p class="place-country" id="place-country"></p>
+                </div>
+                <div class="place-coords" id="place-coords"></div>
+            </div>
+        </div>
+
+        <!-- Current Weather -->
+        <section class="section-block" id="weather-section">
+            <div class="section-header">
+                <h3 class="section-title">
+                    <span class="section-icon">⛅</span>
+                    Current Weather
+                </h3>
+            </div>
+            <div class="weather-current" id="weather-current"></div>
+        </section>
+
+        <!-- 5-Day Forecast -->
+        <section class="section-block" id="forecast-section">
+            <div class="section-header">
+                <h3 class="section-title">
+                    <span class="section-icon">📅</span>
+                    5-Day Forecast
+                </h3>
+            </div>
+            <div class="forecast-grid" id="forecast-grid"></div>
+        </section>
+
+        <!-- Cost Breakdown -->
+        <section class="section-block" id="costs-section">
+            <div class="section-header">
+                <h3 class="section-title">
+                    <span class="section-icon">💰</span>
+                    Estimated Daily Costs <span class="cost-currency" id="cost-currency">(INR ₹)</span>
+                </h3>
+                <div class="budget-tabs" id="budget-tabs">
+                    <button class="budget-tab active" data-budget="budget">Budget</button>
+                    <button class="budget-tab" data-budget="mid_range">Mid-Range</button>
+                    <button class="budget-tab" data-budget="luxury">Luxury</button>
+                </div>
+            </div>
+            <div class="cost-breakdown" id="cost-breakdown"></div>
+        </section>
+
+        <!-- Highlights & Travel Info -->
+        <section class="section-block" id="info-section">
+            <div class="info-grid">
+                <div class="info-card" id="highlights-card">
+                    <h4 class="info-card-title">
+                        <span class="info-icon">🏛️</span> Must-Visit Attractions
+                    </h4>
+                    <ul class="highlights-list" id="highlights-list"></ul>
+                </div>
+                <div class="info-card" id="travel-info-card">
+                    <h4 class="info-card-title">
+                        <span class="info-icon">📋</span> Travel Info
+                    </h4>
+                    <div class="travel-info-content" id="travel-info-content"></div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Tourist Places (from OpenTripMap) -->
+        <section class="section-block" id="places-section" style="display: none;">
+            <div class="section-header">
+                <h3 class="section-title">
+                    <span class="section-icon">📍</span>
+                    Nearby Tourist Places
+                </h3>
+                <span class="places-powered">Powered by OpenTripMap</span>
+            </div>
+            <div class="places-grid" id="places-grid"></div>
+        </section>
+
+
+    </main>
+
+    <!-- ═══ Trending Section ═══ -->
+    <section class="trending-section" id="trending">
+        <div class="trending-container">
+            <div class="section-header centered">
+                <div class="hero-badge" style="margin: 0 auto 1rem;">🔥 Popular Destinations</div>
+                <h2 class="trending-title">Trending Right Now</h2>
+                <p class="trending-subtitle">Click any destination to explore costs and weather</p>
+            </div>
+            <div class="trending-grid" id="trending-grid">
+                <div class="trending-card" data-city="Maldives" style="--accent: #00d4ff;">
+                    <div class="trending-emoji">🏝️</div>
+                    <h4>Maldives</h4>
+                    <p>From ₹8,500/day</p>
+                </div>
+                <div class="trending-card" data-city="Paris" style="--accent: #ff6b9d;">
+                    <div class="trending-emoji">🗼</div>
+                    <h4>Paris</h4>
+                    <p>From ₹8,075/day</p>
+                </div>
+                <div class="trending-card" data-city="Tokyo" style="--accent: #ffd93d;">
+                    <div class="trending-emoji">⛩️</div>
+                    <h4>Tokyo</h4>
+                    <p>From ₹6,375/day</p>
+                </div>
+                <div class="trending-card" data-city="Dubai" style="--accent: #6bcb77;">
+                    <div class="trending-emoji">🏙️</div>
+                    <h4>Dubai</h4>
+                    <p>From ₹7,225/day</p>
+                </div>
+                <div class="trending-card" data-city="Rome" style="--accent: #ee6c4d;">
+                    <div class="trending-emoji">🏛️</div>
+                    <h4>Rome</h4>
+                    <p>From ₹6,970/day</p>
+                </div>
+                <div class="trending-card" data-city="Bali" style="--accent: #a855f7;">
+                    <div class="trending-emoji">🌺</div>
+                    <h4>Bali</h4>
+                    <p>From ₹2,550/day</p>
+                </div>
+                <div class="trending-card" data-city="New York" style="--accent: #3b82f6;">
+                    <div class="trending-emoji">🗽</div>
+                    <h4>New York</h4>
+                    <p>From ₹10,370/day</p>
+                </div>
+                <div class="trending-card" data-city="Bangkok" style="--accent: #f59e0b;">
+                    <div class="trending-emoji">🛕</div>
+                    <h4>Bangkok</h4>
+                    <p>From ₹2,975/day</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ═══ About Section ═══ -->
+    <section class="about-section" id="about">
+        <div class="about-container">
+            <h2 class="about-title">How It Works</h2>
+            <div class="about-grid">
+                <div class="about-card">
+                    <div class="about-icon">🔍</div>
+                    <h4>Search</h4>
+                    <p>Type any city name to begin exploring your dream destination</p>
+                </div>
+                <div class="about-card">
+                    <div class="about-icon">🌤️</div>
+                    <h4>Weather</h4>
+                    <p>Get real-time weather and a 5-day forecast so you can plan wisely</p>
+                </div>
+                <div class="about-card">
+                    <div class="about-icon">💵</div>
+                    <h4>Costs</h4>
+                    <p>See estimated hotel, food, transport and attraction costs per day</p>
+                </div>
+                <div class="about-card">
+                    <div class="about-icon">🗺️</div>
+                    <h4>Explore</h4>
+                    <p>Discover top attractions, best seasons to visit, and visa info</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ═══ Footer ═══ -->
+    <footer class="footer">
+        <div class="footer-container">
+            <div class="footer-logo">
+                <span class="logo-icon">🌍</span>
+                <span class="logo-text">Travel<span class="logo-accent">Scope</span></span>
+            </div>
+            <p class="footer-text">Weather data powered by OpenWeatherMap • Built with ❤️</p>
+            <p class="footer-copy">&copy; 2026 TravelScope. All rights reserved.</p>
+        </div>
+    </footer>
+
+    <!-- ═══ Error Toast ═══ -->
+    <div class="toast" id="error-toast">
+        <span class="toast-icon">⚠️</span>
+        <span class="toast-message" id="toast-message"></span>
+    </div>
+
+    <script src="js/app.js"></script>
+    <script>
+        // ── Navbar auth state ──
+        (function () {
+            const auth = document.getElementById('nav-auth');
+            const username = sessionStorage.getItem('ts_username');
+            if (username) {
+                auth.innerHTML = `
+                    <a href="history.php" class="nav-btn nav-btn-outline">🗺️ My History</a>
+                    <span class="nav-user">👋 ${username}</span>
+                    <a href="logout.php" class="nav-btn nav-btn-outline">Logout</a>`;
+            } else {
+                auth.innerHTML = `
+                    <a href="login.php"    class="nav-btn nav-btn-outline">Sign In</a>
+                    <a href="register.php" class="nav-btn nav-btn-primary">Register</a>`;
+            }
+        })();
+
+        // ── Auto-search from history page ──
+        const _autoQ = sessionStorage.getItem('ts_autosearch');
+        if (_autoQ) {
+            sessionStorage.removeItem('ts_autosearch');
+            document.addEventListener('DOMContentLoaded', () => {
+                const inp = document.getElementById('search-input');
+                if (inp) { inp.value = _autoQ; performSearch(); }
+            });
+        }
+    </script>
+</body>
+</html>

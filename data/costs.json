@@ -1,0 +1,524 @@
+{
+  "cities": {
+    "paris": {
+      "country": "France",
+      "currency": "EUR",
+      "daily_budget": {
+        "budget":    { "hotel": 65,  "food": 20,  "transport": 10, "attractions": 15,  "total": 110 },
+        "mid_range": { "hotel": 155, "food": 50,  "transport": 20, "attractions": 30,  "total": 255 },
+        "luxury":    { "hotel": 450, "food": 130, "transport": 60, "attractions": 70,  "total": 710 }
+      },
+      "highlights": ["Eiffel Tower", "Louvre Museum", "Notre-Dame", "Champs-Élysées", "Montmartre"],
+      "best_season": "April - June, September - October",
+      "visa_info": "Schengen Visa required for most non-EU nationals",
+      "image": "paris"
+    },
+    "london": {
+      "country": "United Kingdom",
+      "currency": "GBP",
+      "daily_budget": {
+        "budget":    { "hotel": 75,  "food": 25,  "transport": 15, "attractions": 18,  "total": 133 },
+        "mid_range": { "hotel": 180, "food": 60,  "transport": 25, "attractions": 38,  "total": 303 },
+        "luxury":    { "hotel": 500, "food": 150, "transport": 65, "attractions": 85,  "total": 800 }
+      },
+      "highlights": ["Big Ben", "Tower of London", "British Museum", "Buckingham Palace", "Hyde Park"],
+      "best_season": "May - September",
+      "visa_info": "Standard Visitor Visa required — no longer in Schengen",
+      "image": "london"
+    },
+    "new york": {
+      "country": "United States",
+      "currency": "USD",
+      "daily_budget": {
+        "budget":    { "hotel": 120, "food": 35,  "transport": 15, "attractions": 25,  "total": 195 },
+        "mid_range": { "hotel": 260, "food": 80,  "transport": 35, "attractions": 55,  "total": 430 },
+        "luxury":    { "hotel": 600, "food": 180, "transport": 85, "attractions": 110, "total": 975 }
+      },
+      "highlights": ["Statue of Liberty", "Central Park", "Times Square", "Empire State Building", "Brooklyn Bridge"],
+      "best_season": "April - June, September - November",
+      "visa_info": "ESTA or B1/B2 Visa required",
+      "image": "newyork"
+    },
+    "tokyo": {
+      "country": "Japan",
+      "currency": "JPY",
+      "daily_budget": {
+        "budget":    { "hotel": 5500,  "food": 1800,  "transport": 800,  "attractions": 1200,  "total": 9300 },
+        "mid_range": { "hotel": 13000, "food": 4500,  "transport": 1800, "attractions": 2800,  "total": 22100 },
+        "luxury":    { "hotel": 40000, "food": 13000, "transport": 6000, "attractions": 7000,  "total": 66000 }
+      },
+      "highlights": ["Shibuya Crossing", "Senso-ji Temple", "Tokyo Tower", "Meiji Shrine", "Akihabara"],
+      "best_season": "March - May, September - November",
+      "visa_info": "Visa-free for many nationalities (up to 90 days)",
+      "image": "tokyo"
+    },
+    "dubai": {
+      "country": "United Arab Emirates",
+      "currency": "AED",
+      "daily_budget": {
+        "budget":    { "hotel": 160,  "food": 60,  "transport": 30,  "attractions": 55,  "total": 305 },
+        "mid_range": { "hotel": 420,  "food": 160, "transport": 75,  "attractions": 130, "total": 785 },
+        "luxury":    { "hotel": 1300, "food": 420, "transport": 200, "attractions": 280, "total": 2200 }
+      },
+      "highlights": ["Burj Khalifa", "Dubai Mall", "Palm Jumeirah", "Desert Safari", "Dubai Marina"],
+      "best_season": "November - March",
+      "visa_info": "Visa on arrival for many nationalities",
+      "image": "dubai"
+    },
+    "rome": {
+      "country": "Italy",
+      "currency": "EUR",
+      "daily_budget": {
+        "budget":    { "hotel": 58,  "food": 18,  "transport": 8,  "attractions": 16,  "total": 100 },
+        "mid_range": { "hotel": 135, "food": 48,  "transport": 18, "attractions": 32,  "total": 233 },
+        "luxury":    { "hotel": 390, "food": 115, "transport": 48, "attractions": 70,  "total": 623 }
+      },
+      "highlights": ["Colosseum", "Vatican City", "Trevi Fountain", "Pantheon", "Roman Forum"],
+      "best_season": "April - June, September - October",
+      "visa_info": "Schengen Visa required for most non-EU nationals",
+      "image": "rome"
+    },
+    "bangkok": {
+      "country": "Thailand",
+      "currency": "THB",
+      "daily_budget": {
+        "budget":    { "hotel": 650,  "food": 300,  "transport": 150, "attractions": 200,  "total": 1300 },
+        "mid_range": { "hotel": 2000, "food": 850,  "transport": 380, "attractions": 550,  "total": 3780 },
+        "luxury":    { "hotel": 6500, "food": 2800, "transport": 1100,"attractions": 1600, "total": 12000 }
+      },
+      "highlights": ["Grand Palace", "Wat Arun", "Chatuchak Market", "Khao San Road", "Floating Markets"],
+      "best_season": "November - February",
+      "visa_info": "Visa-free or visa on arrival for many nationalities",
+      "image": "bangkok"
+    },
+    "barcelona": {
+      "country": "Spain",
+      "currency": "EUR",
+      "daily_budget": {
+        "budget":    { "hotel": 62,  "food": 18,  "transport": 8,  "attractions": 16,  "total": 104 },
+        "mid_range": { "hotel": 145, "food": 48,  "transport": 18, "attractions": 32,  "total": 243 },
+        "luxury":    { "hotel": 390, "food": 115, "transport": 48, "attractions": 68,  "total": 621 }
+      },
+      "highlights": ["Sagrada Familia", "Park Güell", "La Rambla", "Gothic Quarter", "Casa Batlló"],
+      "best_season": "May - June, September - October",
+      "visa_info": "Schengen Visa required for most non-EU nationals",
+      "image": "barcelona"
+    },
+    "sydney": {
+      "country": "Australia",
+      "currency": "AUD",
+      "daily_budget": {
+        "budget":    { "hotel": 105, "food": 35,  "transport": 16, "attractions": 22,  "total": 178 },
+        "mid_range": { "hotel": 230, "food": 85,  "transport": 32, "attractions": 48,  "total": 395 },
+        "luxury":    { "hotel": 580, "food": 190, "transport": 80, "attractions": 100, "total": 950 }
+      },
+      "highlights": ["Sydney Opera House", "Harbour Bridge", "Bondi Beach", "Royal Botanic Garden", "Darling Harbour"],
+      "best_season": "September - November, March - May",
+      "visa_info": "ETA or eVisitor visa required",
+      "image": "sydney"
+    },
+    "istanbul": {
+      "country": "Turkey",
+      "currency": "TRY",
+      "daily_budget": {
+        "budget":    { "hotel": 650,  "food": 200,  "transport": 80,  "attractions": 160,  "total": 1090 },
+        "mid_range": { "hotel": 1800, "food": 550,  "transport": 180, "attractions": 400,  "total": 2930 },
+        "luxury":    { "hotel": 5500, "food": 1600, "transport": 500, "attractions": 900,  "total": 8500 }
+      },
+      "highlights": ["Hagia Sophia", "Blue Mosque", "Grand Bazaar", "Topkapi Palace", "Bosphorus Cruise"],
+      "best_season": "April - May, September - November",
+      "visa_info": "e-Visa available for most nationalities",
+      "image": "istanbul"
+    },
+    "singapore": {
+      "country": "Singapore",
+      "currency": "SGD",
+      "daily_budget": {
+        "budget":    { "hotel": 75,  "food": 18,  "transport": 12, "attractions": 22,  "total": 127 },
+        "mid_range": { "hotel": 190, "food": 55,  "transport": 28, "attractions": 50,  "total": 323 },
+        "luxury":    { "hotel": 520, "food": 160, "transport": 80, "attractions": 110, "total": 870 }
+      },
+      "highlights": ["Marina Bay Sands", "Gardens by the Bay", "Sentosa Island", "Chinatown", "Orchard Road"],
+      "best_season": "February - April",
+      "visa_info": "Visa-free for most nationalities (up to 90 days)",
+      "image": "singapore"
+    },
+    "cairo": {
+      "country": "Egypt",
+      "currency": "EGP",
+      "daily_budget": {
+        "budget":    { "hotel": 500,  "food": 200,  "transport": 80,  "attractions": 150,  "total": 930 },
+        "mid_range": { "hotel": 1500, "food": 600,  "transport": 200, "attractions": 400,  "total": 2700 },
+        "luxury":    { "hotel": 5000, "food": 2000, "transport": 650, "attractions": 1100, "total": 8750 }
+      },
+      "highlights": ["Pyramids of Giza", "Egyptian Museum", "Khan el-Khalili", "Nile River Cruise", "Citadel of Saladin"],
+      "best_season": "October - April",
+      "visa_info": "Visa on arrival for many nationalities",
+      "image": "cairo"
+    },
+    "amsterdam": {
+      "country": "Netherlands",
+      "currency": "EUR",
+      "daily_budget": {
+        "budget":    { "hotel": 78,  "food": 22,  "transport": 10, "attractions": 18,  "total": 128 },
+        "mid_range": { "hotel": 168, "food": 58,  "transport": 22, "attractions": 38,  "total": 286 },
+        "luxury":    { "hotel": 450, "food": 140, "transport": 58, "attractions": 75,  "total": 723 }
+      },
+      "highlights": ["Anne Frank House", "Rijksmuseum", "Van Gogh Museum", "Canal Cruise", "Vondelpark"],
+      "best_season": "April - May, September - October",
+      "visa_info": "Schengen Visa required for most non-EU nationals",
+      "image": "amsterdam"
+    },
+    "mumbai": {
+      "country": "India",
+      "currency": "INR",
+      "daily_budget": {
+        "budget":    { "hotel": 1600, "food": 500,  "transport": 200, "attractions": 300,  "total": 2600 },
+        "mid_range": { "hotel": 4500, "food": 1500, "transport": 550, "attractions": 850,  "total": 7400 },
+        "luxury":    { "hotel": 16000,"food": 5500, "transport": 2200,"attractions": 2800, "total": 26500 }
+      },
+      "highlights": ["Gateway of India", "Marine Drive", "Elephanta Caves", "Dhobi Ghat", "Colaba Causeway"],
+      "best_season": "November - February",
+      "visa_info": "e-Visa available for most nationalities",
+      "image": "mumbai"
+    },
+    "delhi": {
+      "country": "India",
+      "currency": "INR",
+      "daily_budget": {
+        "budget":    { "hotel": 1300, "food": 400,  "transport": 150, "attractions": 250,  "total": 2100 },
+        "mid_range": { "hotel": 3800, "food": 1200, "transport": 450, "attractions": 750,  "total": 6200 },
+        "luxury":    { "hotel": 13000,"food": 4500, "transport": 1800,"attractions": 2200, "total": 21500 }
+      },
+      "highlights": ["Red Fort", "Qutub Minar", "India Gate", "Humayun's Tomb", "Chandni Chowk"],
+      "best_season": "October - March",
+      "visa_info": "e-Visa available for most nationalities",
+      "image": "delhi"
+    },
+    "goa": {
+      "country": "India",
+      "currency": "INR",
+      "daily_budget": {
+        "budget":    { "hotel": 1000, "food": 400,  "transport": 200, "attractions": 200,  "total": 1800 },
+        "mid_range": { "hotel": 3200, "food": 1200, "transport": 500, "attractions": 600,  "total": 5500 },
+        "luxury":    { "hotel": 13000,"food": 4200, "transport": 1800,"attractions": 1600, "total": 20600 }
+      },
+      "highlights": ["Baga Beach", "Fort Aguada", "Basilica of Bom Jesus", "Dudhsagar Falls", "Anjuna Flea Market"],
+      "best_season": "November - February",
+      "visa_info": "e-Visa available for most nationalities",
+      "image": "goa"
+    },
+    "jaipur": {
+      "country": "India",
+      "currency": "INR",
+      "daily_budget": {
+        "budget":    { "hotel": 850,  "food": 300,  "transport": 150, "attractions": 250,  "total": 1550 },
+        "mid_range": { "hotel": 2800, "food": 900,  "transport": 380, "attractions": 650,  "total": 4730 },
+        "luxury":    { "hotel": 11000,"food": 3200, "transport": 1400,"attractions": 1600, "total": 17200 }
+      },
+      "highlights": ["Amber Fort", "Hawa Mahal", "City Palace", "Jantar Mantar", "Nahargarh Fort"],
+      "best_season": "October - March",
+      "visa_info": "e-Visa available for most nationalities",
+      "image": "jaipur"
+    },
+    "bali": {
+      "country": "Indonesia",
+      "currency": "IDR",
+      "daily_budget": {
+        "budget":    { "hotel": 220000,  "food": 85000,  "transport": 55000, "attractions": 65000,  "total": 425000 },
+        "mid_range": { "hotel": 650000,  "food": 220000, "transport": 130000,"attractions": 165000, "total": 1165000 },
+        "luxury":    { "hotel": 2200000, "food": 750000, "transport": 450000,"attractions": 450000, "total": 3850000 }
+      },
+      "highlights": ["Uluwatu Temple", "Tegallalang Rice Terraces", "Ubud Monkey Forest", "Tanah Lot", "Seminyak Beach"],
+      "best_season": "April - October",
+      "visa_info": "Visa on arrival for many nationalities",
+      "image": "bali"
+    },
+    "rio de janeiro": {
+      "country": "Brazil",
+      "currency": "BRL",
+      "daily_budget": {
+        "budget":    { "hotel": 130, "food": 55,  "transport": 22, "attractions": 35,  "total": 242 },
+        "mid_range": { "hotel": 370, "food": 140, "transport": 55, "attractions": 80,  "total": 645 },
+        "luxury":    { "hotel": 1050,"food": 400, "transport": 140,"attractions": 200, "total": 1790 }
+      },
+      "highlights": ["Christ the Redeemer", "Copacabana Beach", "Sugarloaf Mountain", "Maracanã Stadium", "Selaron Steps"],
+      "best_season": "December - March",
+      "visa_info": "Visa-free for many nationalities",
+      "image": "rio"
+    },
+    "cape town": {
+      "country": "South Africa",
+      "currency": "ZAR",
+      "daily_budget": {
+        "budget":    { "hotel": 550,  "food": 200,  "transport": 85,  "attractions": 130,  "total": 965 },
+        "mid_range": { "hotel": 1600, "food": 580,  "transport": 200, "attractions": 300,  "total": 2680 },
+        "luxury":    { "hotel": 5000, "food": 1600, "transport": 550, "attractions": 750,  "total": 7900 }
+      },
+      "highlights": ["Table Mountain", "Cape of Good Hope", "V&A Waterfront", "Robben Island", "Kirstenbosch Gardens"],
+      "best_season": "November - March",
+      "visa_info": "Visa-free for many nationalities",
+      "image": "capetown"
+    },
+    "prague": {
+      "country": "Czech Republic",
+      "currency": "CZK",
+      "daily_budget": {
+        "budget":    { "hotel": 850,  "food": 320,  "transport": 110, "attractions": 220,  "total": 1500 },
+        "mid_range": { "hotel": 2400, "food": 850,  "transport": 270, "attractions": 550,  "total": 4070 },
+        "luxury":    { "hotel": 6500, "food": 2400, "transport": 750, "attractions": 1300, "total": 10950 }
+      },
+      "highlights": ["Charles Bridge", "Prague Castle", "Old Town Square", "Astronomical Clock", "Petřín Tower"],
+      "best_season": "May - September",
+      "visa_info": "Schengen Visa required for most non-EU nationals",
+      "image": "prague"
+    },
+    "maldives": {
+      "country": "Maldives",
+      "currency": "USD",
+      "daily_budget": {
+        "budget":    { "hotel": 130, "food": 65,  "transport": 35, "attractions": 28,  "total": 258 },
+        "mid_range": { "hotel": 420, "food": 160, "transport": 85, "attractions": 65,  "total": 730 },
+        "luxury":    { "hotel": 1500,"food": 420, "transport": 220,"attractions": 160, "total": 2300 }
+      },
+      "highlights": ["Crystal Clear Beaches", "Underwater Restaurant", "Snorkeling", "Water Villas", "Bioluminescent Beach"],
+      "best_season": "November - April",
+      "visa_info": "Visa on arrival for all nationalities (30 days)",
+      "image": "maldives"
+    },
+    "seoul": {
+      "country": "South Korea",
+      "currency": "KRW",
+      "daily_budget": {
+        "budget":    { "hotel": 45000,  "food": 16000,  "transport": 5500, "attractions": 11000, "total": 77500 },
+        "mid_range": { "hotel": 120000, "food": 42000,  "transport": 13000,"attractions": 27000, "total": 202000 },
+        "luxury":    { "hotel": 380000, "food": 130000, "transport": 45000,"attractions": 75000, "total": 630000 }
+      },
+      "highlights": ["Gyeongbokgung Palace", "Myeongdong", "N Seoul Tower", "Bukchon Hanok Village", "Gangnam District"],
+      "best_season": "March - May, September - November",
+      "visa_info": "Visa-free for many nationalities",
+      "image": "seoul"
+    },
+    "kuala lumpur": {
+      "country": "Malaysia",
+      "currency": "MYR",
+      "daily_budget": {
+        "budget":    { "hotel": 85,  "food": 32,  "transport": 16, "attractions": 28,  "total": 161 },
+        "mid_range": { "hotel": 230, "food": 85,  "transport": 38, "attractions": 65,  "total": 418 },
+        "luxury":    { "hotel": 680, "food": 230, "transport": 110,"attractions": 160, "total": 1180 }
+      },
+      "highlights": ["Petronas Twin Towers", "Batu Caves", "KL Tower", "Central Market", "Bukit Bintang"],
+      "best_season": "May - July, December - February",
+      "visa_info": "Visa-free for most nationalities",
+      "image": "kualalumpur"
+    },
+    "lisbon": {
+      "country": "Portugal",
+      "currency": "EUR",
+      "daily_budget": {
+        "budget":    { "hotel": 62,  "food": 18,  "transport": 7,  "attractions": 13,  "total": 100 },
+        "mid_range": { "hotel": 145, "food": 48,  "transport": 18, "attractions": 30,  "total": 241 },
+        "luxury":    { "hotel": 390, "food": 115, "transport": 48, "attractions": 65,  "total": 618 }
+      },
+      "highlights": ["Belém Tower", "Jerónimos Monastery", "Alfama District", "Tram 28", "Pastéis de Belém"],
+      "best_season": "March - May, September - October",
+      "visa_info": "Schengen Visa required for most non-EU nationals",
+      "image": "lisbon"
+    },
+    "moscow": {
+      "country": "Russia",
+      "currency": "RUB",
+      "daily_budget": {
+        "budget":    { "hotel": 2800, "food": 900,  "transport": 320, "attractions": 550,  "total": 4570 },
+        "mid_range": { "hotel": 7500, "food": 2200, "transport": 750, "attractions": 1300, "total": 11750 },
+        "luxury":    { "hotel": 24000,"food": 6500, "transport": 2200,"attractions": 3200, "total": 35900 }
+      },
+      "highlights": ["Red Square", "Kremlin", "St. Basil's Cathedral", "Bolshoi Theatre", "Tretyakov Gallery"],
+      "best_season": "May - September",
+      "visa_info": "Visa required for most nationalities",
+      "image": "moscow"
+    },
+    "vienna": {
+      "country": "Austria",
+      "currency": "EUR",
+      "daily_budget": {
+        "budget":    { "hotel": 68,  "food": 20,  "transport": 9,  "attractions": 16,  "total": 113 },
+        "mid_range": { "hotel": 158, "food": 52,  "transport": 20, "attractions": 32,  "total": 262 },
+        "luxury":    { "hotel": 420, "food": 135, "transport": 58, "attractions": 75,  "total": 688 }
+      },
+      "highlights": ["Schönbrunn Palace", "St. Stephen's Cathedral", "Belvedere Palace", "Vienna State Opera", "Hofburg"],
+      "best_season": "April - May, September - October",
+      "visa_info": "Schengen Visa required for most non-EU nationals",
+      "image": "vienna"
+    },
+    "marrakech": {
+      "country": "Morocco",
+      "currency": "MAD",
+      "daily_budget": {
+        "budget":    { "hotel": 260,  "food": 85,  "transport": 42, "attractions": 65,  "total": 452 },
+        "mid_range": { "hotel": 750,  "food": 220, "transport": 105,"attractions": 160, "total": 1235 },
+        "luxury":    { "hotel": 2600, "food": 650, "transport": 320,"attractions": 420, "total": 3990 }
+      },
+      "highlights": ["Jemaa el-Fnaa", "Majorelle Garden", "Bahia Palace", "Medina Souks", "Koutoubia Mosque"],
+      "best_season": "March - May, September - November",
+      "visa_info": "Visa-free for many nationalities",
+      "image": "marrakech"
+    },
+    "hong kong": {
+      "country": "China (SAR)",
+      "currency": "HKD",
+      "daily_budget": {
+        "budget":    { "hotel": 380,  "food": 130,  "transport": 55,  "attractions": 90,  "total": 655 },
+        "mid_range": { "hotel": 950,  "food": 340,  "transport": 130, "attractions": 220, "total": 1640 },
+        "luxury":    { "hotel": 3000, "food": 980,  "transport": 380, "attractions": 560, "total": 4920 }
+      },
+      "highlights": ["Victoria Peak", "Star Ferry", "Temple Street Night Market", "Big Buddha", "Hong Kong Disneyland"],
+      "best_season": "October - December",
+      "visa_info": "Visa-free for most nationalities",
+      "image": "hongkong"
+    },
+    "athens": {
+      "country": "Greece",
+      "currency": "EUR",
+      "daily_budget": {
+        "budget":    { "hotel": 50,  "food": 16,  "transport": 7,  "attractions": 14,  "total": 87 },
+        "mid_range": { "hotel": 115, "food": 42,  "transport": 16, "attractions": 28,  "total": 201 },
+        "luxury":    { "hotel": 320, "food": 105, "transport": 48, "attractions": 65,  "total": 538 }
+      },
+      "highlights": ["Acropolis", "Parthenon", "Plaka District", "Temple of Zeus", "National Archaeological Museum"],
+      "best_season": "April - June, September - October",
+      "visa_info": "Schengen Visa required for most non-EU nationals",
+      "image": "athens"
+    },
+    "san francisco": {
+      "country": "United States",
+      "currency": "USD",
+      "daily_budget": {
+        "budget":    { "hotel": 140, "food": 38,  "transport": 16, "attractions": 28,  "total": 222 },
+        "mid_range": { "hotel": 295, "food": 95,  "transport": 38, "attractions": 60,  "total": 488 },
+        "luxury":    { "hotel": 650, "food": 210, "transport": 95, "attractions": 120, "total": 1075 }
+      },
+      "highlights": ["Golden Gate Bridge", "Alcatraz Island", "Fisherman's Wharf", "Chinatown", "Cable Cars"],
+      "best_season": "September - November",
+      "visa_info": "ESTA or B1/B2 Visa required",
+      "image": "sanfrancisco"
+    },
+    "berlin": {
+      "country": "Germany",
+      "currency": "EUR",
+      "daily_budget": {
+        "budget":    { "hotel": 58,  "food": 18,  "transport": 8,  "attractions": 12,  "total": 96 },
+        "mid_range": { "hotel": 135, "food": 48,  "transport": 18, "attractions": 28,  "total": 229 },
+        "luxury":    { "hotel": 380, "food": 120, "transport": 55, "attractions": 65,  "total": 620 }
+      },
+      "highlights": ["Brandenburg Gate", "Berlin Wall Memorial", "Museum Island", "Reichstag", "East Side Gallery"],
+      "best_season": "May - September",
+      "visa_info": "Schengen Visa required for most non-EU nationals",
+      "image": "berlin"
+    },
+    "hanoi": {
+      "country": "Vietnam",
+      "currency": "VND",
+      "daily_budget": {
+        "budget":    { "hotel": 320000,  "food": 110000,  "transport": 55000,  "attractions": 65000,  "total": 550000 },
+        "mid_range": { "hotel": 950000,  "food": 300000,  "transport": 140000, "attractions": 165000, "total": 1555000 },
+        "luxury":    { "hotel": 3200000, "food": 980000,  "transport": 450000, "attractions": 450000, "total": 5080000 }
+      },
+      "highlights": ["Ho Chi Minh Mausoleum", "Hoan Kiem Lake", "Old Quarter", "Temple of Literature", "Ha Long Bay"],
+      "best_season": "October - April",
+      "visa_info": "e-Visa available for most nationalities",
+      "image": "hanoi"
+    },
+    "mexico city": {
+      "country": "Mexico",
+      "currency": "MXN",
+      "daily_budget": {
+        "budget":    { "hotel": 420,  "food": 160,  "transport": 65,  "attractions": 110,  "total": 755 },
+        "mid_range": { "hotel": 1200, "food": 420,  "transport": 160, "attractions": 270,  "total": 2050 },
+        "luxury":    { "hotel": 3800, "food": 1300, "transport": 480, "attractions": 660,  "total": 6240 }
+      },
+      "highlights": ["Teotihuacan Pyramids", "Chapultepec Castle", "Zócalo", "Frida Kahlo Museum", "Coyoacán"],
+      "best_season": "March - May",
+      "visa_info": "Visa-free for most nationalities",
+      "image": "mexicocity"
+    },
+    "buenos aires": {
+      "country": "Argentina",
+      "currency": "USD",
+      "daily_budget": {
+        "budget":    { "hotel": 25, "food": 12,  "transport": 5,  "attractions": 8,   "total": 50 },
+        "mid_range": { "hotel": 75, "food": 32,  "transport": 12, "attractions": 20,  "total": 139 },
+        "luxury":    { "hotel": 220,"food": 95,  "transport": 35, "attractions": 50,  "total": 400 }
+      },
+      "highlights": ["La Boca", "Teatro Colón", "Recoleta Cemetery", "Plaza de Mayo", "San Telmo Market"],
+      "best_season": "March - May, September - November",
+      "visa_info": "Visa-free for most nationalities",
+      "image": "buenosaires"
+    },
+    "nairobi": {
+      "country": "Kenya",
+      "currency": "KES",
+      "daily_budget": {
+        "budget":    { "hotel": 2800, "food": 900,  "transport": 350, "attractions": 600,  "total": 4650 },
+        "mid_range": { "hotel": 8000, "food": 2500, "transport": 800, "attractions": 1800, "total": 13100 },
+        "luxury":    { "hotel": 28000,"food": 8000, "transport": 2800,"attractions": 6500, "total": 45300 }
+      },
+      "highlights": ["Nairobi National Park", "David Sheldrick Elephant Orphanage", "Giraffe Centre", "Karen Blixen Museum", "Maasai Market"],
+      "best_season": "June - October, January - February",
+      "visa_info": "e-Visa required for most nationalities",
+      "image": "nairobi"
+    },
+    "petra": {
+      "country": "Jordan",
+      "currency": "JOD",
+      "daily_budget": {
+        "budget":    { "hotel": 22, "food": 10,  "transport": 8,  "attractions": 50,  "total": 90 },
+        "mid_range": { "hotel": 60, "food": 28,  "transport": 20, "attractions": 75,  "total": 183 },
+        "luxury":    { "hotel": 200,"food": 80,  "transport": 55, "attractions": 110, "total": 445 }
+      },
+      "highlights": ["The Treasury", "The Monastery", "Siq Canyon", "Royal Tombs", "High Place of Sacrifice"],
+      "best_season": "March - May, September - November",
+      "visa_info": "Visa on arrival or Jordan Pass recommended",
+      "image": "petra"
+    },
+    "cusco": {
+      "country": "Peru",
+      "currency": "PEN",
+      "daily_budget": {
+        "budget":    { "hotel": 55,  "food": 32,  "transport": 16, "attractions": 72,  "total": 175 },
+        "mid_range": { "hotel": 160, "food": 85,  "transport": 38, "attractions": 130, "total": 413 },
+        "luxury":    { "hotel": 550, "food": 240, "transport": 110,"attractions": 220, "total": 1120 }
+      },
+      "highlights": ["Machu Picchu", "Sacred Valley", "Sacsayhuamán", "Plaza de Armas", "San Pedro Market"],
+      "best_season": "May - September",
+      "visa_info": "Visa-free for most nationalities",
+      "image": "cusco"
+    },
+    "reykjavik": {
+      "country": "Iceland",
+      "currency": "ISK",
+      "daily_budget": {
+        "budget":    { "hotel": 16000, "food": 5500,  "transport": 1800, "attractions": 3500,  "total": 26800 },
+        "mid_range": { "hotel": 38000, "food": 13000, "transport": 4500, "attractions": 8000,  "total": 63500 },
+        "luxury":    { "hotel": 95000, "food": 33000, "transport": 12000,"attractions": 18000, "total": 158000 }
+      },
+      "highlights": ["Blue Lagoon", "Golden Circle", "Northern Lights", "Hallgrímskirkja", "Whale Watching"],
+      "best_season": "June - August (summer), September - March (Northern Lights)",
+      "visa_info": "Schengen Visa required for most non-EU nationals",
+      "image": "reykjavik"
+    }
+  },
+  "regional_defaults": {
+    "south_asia":     { "hotel": 35,  "food": 12,  "transport": 5,  "attractions": 8,  "total": 60 },
+    "southeast_asia": { "hotel": 45,  "food": 18,  "transport": 8,  "attractions": 10, "total": 81 },
+    "east_asia":      { "hotel": 80,  "food": 35,  "transport": 12, "attractions": 20, "total": 147 },
+    "western_europe": { "hotel": 90,  "food": 35,  "transport": 12, "attractions": 20, "total": 157 },
+    "eastern_europe": { "hotel": 50,  "food": 20,  "transport": 7,  "attractions": 10, "total": 87 },
+    "north_america":  { "hotel": 130, "food": 40,  "transport": 18, "attractions": 28, "total": 216 },
+    "south_america":  { "hotel": 40,  "food": 18,  "transport": 7,  "attractions": 10, "total": 75 },
+    "middle_east":    { "hotel": 70,  "food": 28,  "transport": 12, "attractions": 18, "total": 128 },
+    "africa":         { "hotel": 45,  "food": 18,  "transport": 8,  "attractions": 12, "total": 83 },
+    "oceania":        { "hotel": 110, "food": 40,  "transport": 18, "attractions": 25, "total": 193 },
+    "default":        { "hotel": 60,  "food": 22,  "transport": 8,  "attractions": 12, "total": 102 }
+  }
+}
